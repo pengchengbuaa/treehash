@@ -1,2 +1,3 @@
 from .treehash import TreeHash
-__all__ = ["TreeHash"]
+from .treehash import MEGABYTE
+__all__ = ["TreeHash", "MEGABYTE"]
