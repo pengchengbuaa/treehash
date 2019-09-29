@@ -18,8 +18,9 @@ if __name__ == "__main__":
     file_name = args.file_name
     process_n = args.process_n
     file_size = os.path.getsize(file_name)
-    print("Processing file :"+file_name + " with size:"+file_size + "bytes")
-    print("Using " + str(process_n) + "processes to hash")
+    print("Processing file: "+file_name +
+          " with size:"+str(file_size) + "bytes")
+    print("Using " + str(process_n) + " processes to hash")
     with open(file_name, 'rb') as my_file:
         chunck_n = math.ceil(file_size / MEGABYTE)
         treehash = TreeHash(chunck_n)
